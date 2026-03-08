@@ -2795,8 +2795,8 @@ input[type="button"]:disabled,
 
 #main > section {
   border-top: solid 2px #efefef;
-  margin: 4em 0 0 0;
-  padding: 4em 0 0 0;
+  margin: 3em 0 0 0;
+  padding: 3em 0 0 0;
 }
 
 #main > section:first-child {
@@ -3322,4 +3322,36 @@ body.is-touch .poptrox-popup .closer {
     margin-left: 0;
     padding-left: 0;
   }
+}
+/* contact section */
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background: #0077ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }

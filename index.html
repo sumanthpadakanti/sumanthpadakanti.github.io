@@ -210,16 +210,33 @@
       </section>
       <!-- Contact -->
       <section id="contact">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLScnns8Rds22gt-c1n6kRqUXkY9vpcxu1xUpUOUeb5jJZm_haQ/viewform?embedded=true"
-          width="740"
-          height="1044"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-        >
-          Loading…
-        </iframe>
+        <div class="contact-container">
+          <h2>Contact Me</h2>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="name">Phone No</label>
+              <input type="number" id="phone" name="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <button onclick="sendMessage()">Send Message</button>
+          </div>
+        </form>
       </section>
     </main>
     <!-- Footer -->
@@ -258,3 +275,22 @@
     <script src="assets/js/main.js"></script>
   </body>
 </html>
+<script>
+  function sendMessage() {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    if (!name || !phone || !email || !message) {
+      return;
+    }
+    const subject = `Portfolio Contact from ${name}`;
+  const body =
+    `Name: ${name}\n` +
+    `Email: ${email}\n\n` +
+    `Message:\n${message}`;
+
+  window.location.href =
+    `mailto:youremail@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  }
+</script>
